@@ -37,7 +37,7 @@
     again. Systems use many protocols such as journaling or copy on write to do
     this stuff.
     
-*** Design Goals
+** Design Goals
     1. Virtualize the hardware.
     2. Deal with tricky issues related to concurrency.
     3. stores cat pictures persistently.
@@ -48,7 +48,7 @@
     8. Should be energy-efficient seeing the rising electricity prices.
     9. Should be secure from malware.
 
-*** History - 
+** History - 
     Briefly learn about the some operating systems- 
     1. [Unix](https://en.wikipedia.org/wiki/Unix)
     2. [Apple II](https://en.wikipedia.org/wiki/Apple_II)

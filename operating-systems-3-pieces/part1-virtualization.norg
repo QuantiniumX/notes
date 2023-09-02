@@ -1,0 +1,52 @@
+* The Abstraction - The Process
+  1. We Talk about the most fundamental abstraction that OS provides the user : *Process*
+  2. The program itself is lifeless and just sits around in the disk. its the 
+  OS that takes these bytes and get it running.
+  3. The illusion of virtual CPU is created by the technique known as time sharing 
+  i.e it stops the process and runs some other process and so forth. 
+  4. Time sharing is implemented by uusing a context switch, which gives the OS
+  the ability to stop one process and run other.
+  5. A Scheduling Policy is also made that decides which process to run(depending 
+  upon the time that program has run before, performance metric, type of program)
+
+** The Abstraction - A process
+   1. To understand the process we have to know about its machine state: what a 
+   program can read and update while its is running.
+
+    *** Memory
+        1. Instructions lie in the memory while it's running. Thus the memory 
+        that the process can address( Address Space ) is part of the process.
+
+    *** Registers
+        1. Many instructions explicitely read or update the register thus making
+        it important to execution of the process
+        **** Type of Registers
+            1. *Program Counter(PC)* - Also called *Instruction Pointer(IP)* 
+             tells us which instruction of the program is being executed.
+            2. *Stack Pointer(SP)* and *frame pointer* are used to manage the 
+             stack for function parameters, local variables snd return address.
+
+    *** I/O information
+        1. its includes the list of files that are being used and being stored
+** Process API
+   Just an Idea what goes in the interface of an OS.
+*** Create - 
+    OS should have a way to create new process such as when you click to open a 
+    it should create a new process that instructs to open a new file.
+*** Destroy -
+    Systems should provide a way to destroy or halt a process while its being 
+    processed such as after executing a file which instructs to run infinitely 
+    we should able to stop it forcefully. Similar to CTRL + C.
+*** Wait 
+    Sometimes it is useful for the process to to stop running so there should
+    a way to wait for the process to finish executing succesfully.
+*** Miscelaneous Control - 
+    Other than killing or waiting for the process there should a way to make it 
+    suspend in it a state and resume it afterwords according to users wish.
+*** Status - 
+    There usually is an interface to tell in which state the process it i.e if 
+    it's finished, it got an error or exited, its being suspended, etc.
+
+** Process Creation 
+
+
