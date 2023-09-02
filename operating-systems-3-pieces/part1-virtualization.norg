@@ -48,5 +48,47 @@
     it's finished, it got an error or exited, its being suspended, etc.
 
 ** Process Creation 
+   1. Executing the program firstly requires the OS to read the bytes from the 
+   disk and put it in the memory for execution.
+   2. In early days, we used loading eagerly i.e. the whole program is put it
+   into the memory for it to execute.
+   3. Nowadays, we load lazily i.e. only the part of the code that is to be 
+   executed is loaded into the OS.
+   4. The OS should allocate some memory for program's runtime-stack.
+   5. The OS should allocate some memory to the heap i.e. memory allocated using 
+   malloc() function.The heap is needed for DS, linked lists, hash tables, tress, etc.
+   6.After loading the code in the memory the program is to be executed from main().
+   By jumping to the main the OS tranfer the control to the CPU to begin the execution 
+   of the program.
 
+** Pocess States
+   In a simplified way, a process can in three different states - 
+*** Running -
+    In this state, a process is running in the processor, This means its is 
+    executing the instructions.
+*** Ready - 
+    In this state, a process is ready to run but for some reason the OS has 
+    decided that it shoudldn't run now.
+*** Blocked -
+    In this state, the process is not running as it has to do some thing else 
+    that is not handled by the CPU such as reading from the disk thus the cpu 
+    executes some other program while that program read from disk.
+
+   Process Transistion states - 
+                            rescheduling
+    Running <-----------------------------------------------> Ready 
+       ||                   descheduling                      ||
+       ||                                                     ||
+       ||  I/O : Initiate                     I/O: DONE       ||
+       ||______________________\         /____________________||
+       |_______________________/ BLOCKED \_____________________|
+
+  Some extra states are also present such as initial state(the process is being 
+  created), zombie state(it has finished executing but hasn't been cleaned up)
+** Data Structures - 
+   1. To track each process, the OS may keep some kind of process list for the 
+   program and some additional process regarding it.
+   2. To just get the gist of it the register's context will hold the contents 
+   of it's registered state as if right now i.e. ready, running or blocked. 
+* Interlude : The Process API
 
