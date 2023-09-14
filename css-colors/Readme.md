@@ -1,5 +1,6 @@
 ** It contains some of the colors and its hex and rgb values.
 
-|                     Colors                                                   |   Name   |Hex Code |       RGB  VALUE     |
-|------------------------------------------------------------------------------|----------|---------|------------          |
-|- <img src="http://medyk.org/colors/cd5c5c.png" width="15" height="15">       | IndianRED| #CD5C5C |   rgb (205, 92, 92)  |
+
+ <img src="../css-colors/Color-Names-—-HTML-Color-Codes.png" width="700" height=auto>
+
+**Source** - https://htmlcolorcodes.com/color-names/
