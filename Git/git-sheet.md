@@ -1,6 +1,6 @@
 **Git Commands**
 
-# Stach
+# Stash
 ```
 $ git stash push [msg]                 // Save your local modifications to a new stash
 $ git stash pop                        // Applies the changes from the last (or specified) stash and then removes the given stash.
