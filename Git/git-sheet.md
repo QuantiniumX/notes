@@ -1,3 +1,9 @@
+# Create ssh key and link it to github
+~~~
+$ ssh-keygen -t rsa         //You can also specify a different key type by replacing rsa with ed25519 or ecdsa if you prefer.
+~~~
+
+
 **Git Commands**
 
 # Stash
