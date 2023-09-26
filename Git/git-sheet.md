@@ -6,7 +6,9 @@ Your ssh key will be located at default location ~/.ssh but for custom location 
 ~~~
 $ ssh-keygen -t rsa -f /path/to/your/custom/keyfile
 ~~~
-
+- Now go to the location where you saved you ssh key. by default at ~/.ssh/.it'll be named id_rsa.pub. Depending upon the type of key it may be difficult.
+- Copy it and go to your Github.
+- Go to settings/SSH and GPG keys. Click on new ssh key and paste it.
 
 **Git Commands**
 
