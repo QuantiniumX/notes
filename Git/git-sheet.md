@@ -2,6 +2,10 @@
 ~~~
 $ ssh-keygen -t rsa         //You can also specify a different key type by replacing rsa with ed25519 or ecdsa if you prefer.
 ~~~
+Your ssh key will be located at default location ~/.ssh but for custom location by
+~~~
+$ ssh-keygen -t rsa -f /path/to/your/custom/keyfile
+~~~
 
 
 **Git Commands**
